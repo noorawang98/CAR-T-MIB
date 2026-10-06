@@ -1,0 +1,37 @@
+{
+  "python_syntax": {
+    "files": 52,
+    "passed": true
+  },
+  "r_lexical_delimiters": {
+    "files": 19,
+    "failed": []
+  },
+  "scientific_call_differences": [
+    {
+      "source": "scripts/03_functional_gsva_roc/step82_mem_exh_final.py",
+      "removed_calls": {
+        "pearsonr": 1
+      }
+    },
+    {
+      "source": "scripts/05_neighbourhood_families/step13_ccr1_coloc.py",
+      "removed_calls": {
+        "mannwhitneyu": 1,
+        "spearmanr": 2
+      }
+    }
+  ],
+  "rendering_calls_remaining": [],
+  "retained_scripts": 65,
+  "full_data_rerun": false,
+  "r_runtime_available": false,
+  "unchanged_computational_helper_asts": 89,
+  "fourier_synthetic_tests": "passed",
+  "bundled_shared_modules": 1,
+  "v2_new_helper_asts_unchanged": 16,
+  "v2_cnv_ast_unchanged": true,
+  "v2_common_ast_unchanged": true,
+  "v2_cnv_smoothing_checks": "passed",
+  "v2_bundled_common_preflight": "passed"
+}

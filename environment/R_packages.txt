@@ -1,0 +1,33 @@
+# R versions actually observed (2026-10-02T15:09Z)
+# Section A: R_LIBS_USER=/home/wr/R_4.3  <- the library that carries the analysis packages
+R 4.3.2
+  Scissor 2.0.0 
+  GSVA 1.48.3 
+  limma 3.56.2 
+  edgeR 3.42.4 
+  homologene 1.7.68.23.10.31 
+  CellChat 1.6.1 
+  liana 0.1.14 
+  sva 3.48.0 
+  survminer 0.5.0 
+  Biobase 2.60.0 
+  Seurat 5.0.3 
+  SeuratObject 5.2.0 
+  survival 3.5.7 
+  data.table 1.14.8 
+  Matrix 1.6.5 
+  presto 1.0.0 
+  ComplexHeatmap 2.16.0 
+  NicheNet MISSING (not in this library) 
+  spacexr MISSING (not in this library) 
+
+# Section B: default .libPaths() (packages visible without R_LIBS_USER)
+  Scissor MISSING 
+  GSVA MISSING 
+  limma MISSING 
+  homologene MISSING 
+  CellChat MISSING 
+  liana MISSING 
+  sva MISSING 
+  survminer MISSING 
+  Biobase MISSING 

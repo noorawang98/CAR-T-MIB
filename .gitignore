@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+results/
+logs/
+*.h5ad
+*.rds
+*.RData
+.DS_Store
