@@ -21,7 +21,7 @@ python run_analysis.py --check analysis/06_spatial_neighbourhood/perivascular_pe
 python run_analysis.py analysis/06_spatial_neighbourhood/perivascular_permutation_test.py
 ```
 
-Project data are not redistributed. The second author archive supplied spatial CNV/region generation and `common.py`; these are now included. Other upstream entry points and external R helpers remain required for a complete rerun. See the explicit dependency list rather than treating this as a self-contained raw-data pipeline.
+Project data are not redistributed. The second archive supplied spatial CNV/region generation and `common.py`; these are now included. Other upstream entry points and external R helpers remain required for a complete rerun. See the explicit dependency list rather than treating this as a self-contained raw-data pipeline.
 
 The supplied environment snapshots are historical records, not a tested lockfile. In particular, the listed Python and pandas versions should not be interpreted as a compatible environment specification. GSVA scripts use the legacy `gsva(matrix, gene_sets, ...)` interface and require a compatible GSVA version.
 
@@ -31,9 +31,9 @@ The supplied environment snapshots are historical records, not a tested lockfile
 - [Excluded scripts](docs/excluded_scripts.csv): files removed from the release and their reasons.
 - [Methods/code alignment](docs/METHOD_ALIGNMENT.md): differences that cannot be resolved by reorganizing code.
 - [Validation](docs/VALIDATION.md): checks performed and their limits.
-- [Final clinical GSEA update](docs/GSEA_UPDATE.md): author-confirmed adjusted path and a source sorting correction.
+- [Final clinical GSEA update](docs/GSEA_UPDATE.md): user-confirmed adjusted path and a source sorting correction.
 - [Second-archive update](docs/V2_UPDATE.md): added calculations, restored dependencies and remaining definition differences.
-- `pending_entrypoint/analyze.py`: an additional author-supplied CSV interface; its imported source modules were not supplied, so it is not the executable entry point for this release.
+- `pending_entrypoint/analyze.py`: an additional user-supplied CSV interface; its imported source modules were not supplied, so it is not the executable entry point for this release.
 
 No software licence was assigned on the author's behalf; see `LICENSE_TBD.md`.
 
