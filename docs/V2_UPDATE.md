@@ -6,28 +6,28 @@ The updated release retains **65 analysis scripts plus the supplied shared `comm
 
 | Included calculation | Reason |
 |---|---|
-| `step00_raw_car_counts.py` | Extract raw total/CAR UMI from Stereo-seq matrices. |
-| `step01_build_spot_master.py` | Assemble original spot metadata/counts; also export the same spot order required by the Scissor coefficient loader. |
-| `step03_region_annot.py` | Spatial CNV score, tumour voting and tumour zones. |
+| `raw_car_counts.py` | Extract raw total/CAR UMI from Stereo-seq matrices. |
+| `build_spot_master.py` | Assemble original spot metadata/counts; also export the same spot order required by the Scissor coefficient loader. |
+| `region_annot.py` | Spatial CNV score, tumour voting and tumour zones. |
 | `src/common.py` | Supply original shared data loaders, metadata and BH helper. |
-| `step04_gsva_grpr.py`, `step17_kmeans_grpr.py`, `step18_marker_scores.py`, `step48_final_labels.py` | Minimal legacy support chain needed to construct the existing def5 input read by `common.grpr_labels()`. Kept under `legacy_dependencies`; not promoted to the current grouping. |
-| `step06_scissor_coefs.R` | Supply the per-cohort coefficients consumed by `common.scissor_labels()`. Requires original cohort-fit `.RData`. |
-| `step07_task3_scissor.py` | Keep only original table assembly/derived metadata and `spot_full_table.csv` export; omit superseded comparison statistics. |
-| `step09_car_proportions.py` | CAR-positive fractions and tabular comparisons. Explicitly loads the original `GRPR_sample` sidecar required for its legacy split. The original fixed Vehicle background rate is preserved. |
-| `step32_niche_v2.py` | Supply the ring-niche input consumed by the already-retained `step61` mixed-model features; drawing removed. It is a separate niche definition. |
+| `gsva_grpr.py`, `kmeans_grpr.py`, `marker_scores.py`, `final_labels.py` | Minimal legacy support chain needed to construct the existing def5 input read by `common.grpr_labels()`. Kept under `legacy_dependencies`; not promoted to the current grouping. |
+| `scissor_coefs.R` | Supply the per-cohort coefficients consumed by `common.scissor_labels()`. Requires original cohort-fit `.RData`. |
+| `prepare_scissor_spot_table.py` | Keep only original table assembly/derived metadata and `spot_full_table.csv` export; omit superseded comparison statistics. |
+| `car_proportions.py` | CAR-positive fractions and tabular comparisons. Explicitly loads the original `GRPR_sample` sidecar required for its legacy split. The original fixed Vehicle background rate is preserved. |
+| `niche_v2.py` | Supply the ring-niche input consumed by the already-retained `neighbour_rings` mixed-model features; drawing removed. It is a separate niche definition. |
 
 Remaining module-13 scripts are historical variants, batch/normalisation diagnostics, unrelated subtype analyses or drawing workflows; they were not indiscriminately added. The alternate `step31_lym_downstream.py` and MAN1A analysis were excluded. The complete exclusion inventory was refreshed against the second archive.
 
 ## Input sequence
 
 ```text
-step00 raw counts → step01 spot master → step02 CAR calls → step03 CNV/regions
+raw_car_counts raw counts → step01 spot master → step02 CAR calls → region_annot CNV/regions
 ```
 
 For the chromosome-window score, use the source's chosen tumour program. The code provides `TUMOR_MOD=mel` (default) and `TUMOR_MOD=lym` with `SUF=_lym`; it provides no epithelial program. Do not rename these branches to malignant epithelial without changing the biological input definition.
 
-The optional legacy sidecar sequence is `step04 → step17 → step18 → step48`. `step04` reads existing GSVA scores; it does not generate the full original MSigDB GSVA matrix. The current functional label chain remains `step78 → step78b → step82`, with current region consumers reading `GRPR_quad_M5`.
+The optional legacy sidecar sequence is `step04 → kmeans_grpr → marker_scores → final_labels`. `step04` reads existing GSVA scores; it does not generate the full original MSigDB GSVA matrix. The current functional label chain remains `clinical_gsva → clinical_gsva_run → mem_exh_final`, with current region consumers reading `GRPR_quad_M5`.
 
-The existing ring-feature branch needs `step03` with `TUMOR_MOD=lym, SUF=_lym`, followed by `step32`. Its outputs do not replace the default `spot_regions.csv`.
+The existing ring-feature branch needs `region_annot` with `TUMOR_MOD=lym, SUF=_lym`, followed by `niche_v2`. Its outputs do not replace the default `spot_regions.csv`.
 
 The CNV algorithm, marker sets, thresholds, voting rules, neighbourhood tests and random seeds were preserved. Changes outside rendering are table/input wiring: spot-order export, explicit legacy label-sidecar loading, a calculation-only integrated-table export and bundled-module routing in the runner.

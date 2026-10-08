@@ -96,7 +96,7 @@ def main():
     E.to_csv(os.path.join(OUT, 'expr_for_gsva.csv'))
     with open(os.path.join(OUT, 'panels_for_gsva.json'), 'w') as fh:
         json.dump({c: g for c, g in panel_hvg.items() if len(g) >= 5}, fh)
-    print('wrote expression + panels for GSVA (step54b_gsva.R)')
+    print('wrote expression + panels for GSVA (gsva.R)')
     print(json.dumps({c: len(g) for c, g in panel_hvg.items()}, indent=0))
 if __name__ == '__main__':
     main()

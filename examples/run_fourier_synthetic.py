@@ -14,7 +14,7 @@ import pandas as pd
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "src"))
 from fourier_core import BANDS, to_grid, fill, spec, masks, recon, band_corr, toroidal_null, plus_one_p, bh
 
-NPERM = 300          # same value as the real run (step96_fourier_m5_mib.py)
+NPERM = 300          # same value as the real run (fourier_m5_mib.py)
 SEED = 0             # same seed as the real run
 
 

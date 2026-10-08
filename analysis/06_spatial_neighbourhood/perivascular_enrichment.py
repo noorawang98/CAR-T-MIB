@@ -4,7 +4,7 @@ Extracted from step12_perivascular_summary_fig.py without changing collect().
 import os
 import numpy as np
 import pandas as pd
-from step01_region_define_stats import TAB
+from region_define_stats import TAB
 SECTIONS = ["NR1", "NR2", "NR3", "R1", "R2", "R3"]
 REGIONS = ["Tumor_core", "Peritumor", "Extratumor", "Perivascular"]
 

@@ -4,18 +4,18 @@
     "passed": true
   },
   "r_lexical_delimiters": {
-    "files": 19,
+    "files": 20,
     "failed": []
   },
   "scientific_call_differences": [
     {
-      "source": "scripts/03_functional_gsva_roc/step82_mem_exh_final.py",
+      "source": "scripts/03_functional_gsva_roc/mem_exh_final.py",
       "removed_calls": {
         "pearsonr": 1
       }
     },
     {
-      "source": "scripts/05_neighbourhood_families/step13_ccr1_coloc.py",
+      "source": "scripts/05_neighbourhood_families/ccr1_coloc.py",
       "removed_calls": {
         "mannwhitneyu": 1,
         "spearmanr": 2
@@ -23,7 +23,7 @@
     }
   ],
   "rendering_calls_remaining": [],
-  "retained_scripts": 65,
+  "retained_scripts": 66,
   "full_data_rerun": false,
   "r_runtime_available": false,
   "unchanged_computational_helper_asts": 89,
@@ -33,5 +33,8 @@
   "v2_cnv_ast_unchanged": true,
   "v2_common_ast_unchanged": true,
   "v2_cnv_smoothing_checks": "passed",
-  "v2_bundled_common_preflight": "passed"
+  "v2_bundled_common_preflight": "passed",
+  "gsea_final_model": "group + categorical Pre/Post",
+  "gsea_rank": "log2FC from adjusted groupPR coefficient, author-confirmed",
+  "gsea_name_pairing_fix": "synthetically checked; no real-data rerun"
 }

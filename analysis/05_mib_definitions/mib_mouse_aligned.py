@@ -1,5 +1,5 @@
 """Step60: 与鼠侧 step03 完全一致的 niche/MIB 口径(人侧版本)。
-鼠侧口径(step03_region_annot.py):
+鼠侧口径(region_annot.py):
   - 模块分 = 逐基因在样本内 z 后取均值(setscore), 直接在 spot 表达上算(非 DeSTVI 比例)
   - 基因集: endo/mye/caf/acaf/ccr1mye/tcell/bcell (人同源基因), tbz=(tcell+bcell)/2
   - 分位: Q50/Q75/Q90 = 0.50/0.75/0.90 (样本内百分位); KNN=6

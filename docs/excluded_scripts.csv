@@ -43,7 +43,6 @@ scripts/07_clinical_section_gsea/step106a_spotlevel_logfc.py,"older, alternate o
 scripts/07_clinical_section_gsea/step106b_spotlevel_gsea.R,"older, alternate or overlapping implementation; not selected as canonical",27c2d9899234cfcf1447fa0bde0d15478d0e45aa3e78e1e4b171e83072e6aa21
 scripts/07_clinical_section_gsea/step108a_spotlevel_strat.py,"older, alternate or overlapping implementation; not selected as canonical",a9c3886eda8f7ad61118ad5b50d6c72c2552b1b8be3e55db15eb47ae73610898
 scripts/07_clinical_section_gsea/step108b_gsea_strat.R,"older, alternate or overlapping implementation; not selected as canonical",19905148c77d26d1714a810e8f09344451614077ab505ba35556c46dc1e456a9
-scripts/07_clinical_section_gsea/step108c_pseudobulk_adjtime_gsea.R,"older, alternate or overlapping implementation; not selected as canonical",fd4f3d2c0db9cd73c241694e7a7e1d24e395ff333f126a702c2cd456806c617a
 scripts/08_mics_imaging/batch_mics_to_h5ad_08.py,"older, alternate or overlapping implementation; not selected as canonical",e6742f3d0699289c4806ee1ae1568032673cb20d1c3917c3fc13e0bf3419ae38
 scripts/09_survival_pancancer/cox_components.R,"older, alternate or overlapping implementation; not selected as canonical",cf2fe43e9bd39d4d104e1e31366b7afaccbcfe40259e58ca58a78a2b5c226890
 scripts/09_survival_pancancer/run_CCR1TAM_coloc_risk.py,"older, alternate or overlapping implementation; not selected as canonical",7956639b2a1bd3e53ee08cac8ef1ba78ef8a1609dca041c339c72ae8576a8604

@@ -38,7 +38,7 @@ def main():
     M = pd.concat(frames)
     M.index.name = 'spot'
     M.to_csv(os.path.join(RES, 'spot_master.csv'))
-    # Export the original spot order required by step06_scissor_coefs.R.
+    # Export the original spot order required by scissor_coefs.R.
     M[['sample', 'barcode']].to_csv(os.path.join(RES, 'spot_order.csv'), index=False)
     print('wrote spot_master.csv', M.shape)
     print(M.groupby('sample')[['umi_total', 'umi_car', 'car_cp10k']].agg(['median', 'sum']).to_string())

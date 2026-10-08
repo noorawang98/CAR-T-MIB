@@ -3,11 +3,11 @@
 
 Provenance (logic copied verbatim - no algorithm change):
   * ``to_grid``, ``fill``, ``spec``, ``masks``, ``recon``, ``BANDS``
-      <- /home/ST_Data/mouse/cart_region/step96_fourier_m5_mib.py (lines 27-79),
+      <- /home/ST_Data/mouse/cart_region/fourier_m5_mib.py (lines 27-79),
          which itself reuses the step11_fourier.py pipeline
   * ``bh`` <- /home/ST_Data/mouse/cart_region/common.py (lines 61-67)
   * ``band_corr`` / ``toroidal_null`` / ``plus_one_p`` / ``pooled_plus_one_p``
-      <- the inner loop of step96_fourier_m5_mib.py (lines 130-148), factored into
+      <- the inner loop of fourier_m5_mib.py (lines 130-148), factored into
          functions so that the observed statistic, the toroidal-shift null and the
          plus-one correction can be unit-tested. The numerical operations are identical:
          np.roll shifts, np.corrcoef on the flattened band components, and
@@ -33,7 +33,7 @@ except Exception:                        # pragma: no cover
 
 
 def to_grid(x, y, v, sp):
-    """Rasterise spot values onto a square grid of pitch ``sp`` (step96 lines 51-54)."""
+    """Rasterise spot values onto a square grid of pitch ``sp`` (fourier_m5_mib lines 51-54)."""
     x = np.asarray(x, dtype=float); y = np.asarray(y, dtype=float); v = np.asarray(v, dtype=float)
     xi = np.round((x - x.min()) / sp).astype(int); yi = np.round((y - y.min()) / sp).astype(int)
     G = np.full((yi.max() + 1, xi.max() + 1), np.nan)
@@ -71,7 +71,7 @@ def recon(F, ms):
 
 
 def band_corr(a, b):
-    """Pearson r between two flattened band components (step96 line 140)."""
+    """Pearson r between two flattened band components (fourier_m5_mib line 140)."""
     return float(np.corrcoef(np.asarray(a).ravel(), np.asarray(b).ravel())[0, 1])
 
 
@@ -88,7 +88,7 @@ def toroidal_null(feature_band, scissor_band, n_perm=300, rng=None):
 
 
 def plus_one_p(obs, null):
-    """Two-sided plus-one permutation P (step96 line 146)."""
+    """Two-sided plus-one permutation P (fourier_m5_mib line 146)."""
     null = np.asarray(null, dtype=float)
     return float((np.sum(np.abs(null) >= abs(obs)) + 1) / (len(null) + 1))
 

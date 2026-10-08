@@ -62,7 +62,7 @@ def main():
     c7 = pd.read_csv(PROJECT_ROOT + '/mouse/cart_region/grpr_gsva_v2/msigdb_sets.csv.gz')
     c7file = os.path.join(WORK, 'msigdb_c7_mouse.csv.gz')
     if not os.path.exists(c7file):
-        print('NOTE: need the C7 dump; run step78a_dump_c7.R first')
+        print('NOTE: need the C7 dump; run dump_c7.R first')
         return
     C7 = pd.read_csv(c7file)
     tc = C7[C7.gs_name.str.contains(TC_PAT, case=False) & C7.gs_name.str.contains(ST_PAT, case=False)]

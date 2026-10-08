@@ -27,7 +27,7 @@ import pandas as pd
 from scipy.stats import binomtest, chi2_contingency, fisher_exact
 from statsmodels.stats.contingency_tables import StratifiedTable
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from step01_region_define_stats import RES, REGIONS, TAB, WD
+from region_define_stats import RES, REGIONS, TAB, WD
 SECTIONS = ['NR1', 'NR2', 'NR3', 'R1', 'R2', 'R3']
 GROUP = {'NR1': 'NR', 'NR2': 'NR', 'NR3': 'NR', 'R1': 'R', 'R2': 'R', 'R3': 'R'}
 

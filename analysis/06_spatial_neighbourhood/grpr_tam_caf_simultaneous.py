@@ -34,7 +34,7 @@ from scipy.stats import fisher_exact, mannwhitneyu
 from sklearn.neighbors import NearestNeighbors
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, PROJECT_ROOT + '/mouse/cart_region')
-from step01_region_define_stats import RES, TAB, WD
+from region_define_stats import RES, TAB, WD
 from common import RCL
 SECTIONS = ['NR1', 'NR2', 'NR3', 'R1', 'R2', 'R3']
 GROUP = {'NR1': 'NR', 'NR2': 'NR', 'NR3': 'NR', 'R1': 'R', 'R2': 'R', 'R3': 'R'}

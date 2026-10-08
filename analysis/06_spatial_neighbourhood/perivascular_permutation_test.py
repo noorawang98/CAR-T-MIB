@@ -47,7 +47,7 @@ Outputs: <WD>/update_statistics/tables/perivasc_perm_test_1000_en.csv
          <WD>/update_statistics/tables/perivasc_group_compare_1000_en.csv
          <WD>/update_statistics/tables/perivasc_auc_compare_1000_en.csv
          <WD>/update_statistics/tables/perivasc_definition_coverage_1000_en.csv
-Usage  : ST_WD=<workdir> python step114_perivasc_perm_test_en1000.py
+Usage  : ST_WD=<workdir> python perivascular_permutation_test.py
 """
 import os
 PROJECT_ROOT = os.environ.get('PROJECT_ROOT', '')

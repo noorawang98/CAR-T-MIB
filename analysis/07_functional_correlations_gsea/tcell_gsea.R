@@ -7,7 +7,7 @@ HOME_ROOT <- Sys.getenv("HOME_ROOT", unset = "")
 # Step02 (nr1r1_analysis_M5/gsea): GSEA of the NR1 + R1 CAR+ spots ranked by log2FC(PR/GR)
 # -----------------------------------------------------------------------------
 # Grouping : GRPR_quad_M5 (current M5-based T-cell-function grouping; 66 GR / 50 PR
-#            CAR+ spots, 103 GR / 89 PR) -> ranking from step01_nr1r1_rank.py
+#            CAR+ spots, 103 GR / 89 PR) -> ranking from nr1r1_rank.py
 # Ranking  : log2( (CPM_PR + 1) / (CPM_GR + 1) ) of the NR1 pseudobulk CPM, descending
 #            => positive metric / positive NES = PR-high (exhausted / poor-response side)
 #               negative NES                    = GR-high (memory-functional side)

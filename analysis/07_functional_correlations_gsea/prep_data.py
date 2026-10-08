@@ -247,7 +247,7 @@ def panel_volcano(labels):
     mcp = lin_p[idx_g] / nl[1]
     T = pd.DataFrame(dict(gene=var[idx_g], mean_CP10K_GR=mcg, mean_CP10K_PR=mcp, log2FC_spot_PR_GR=np.log2((mcp + 1) / (mcg + 1)), mean_GR=mg, mean_PR=mp, diff_spot=mp - mg, cliff_delta=cl, cpm_GR=cpm_g, cpm_PR=cpm_p, log2FC_CPM_PR_GR=np.log2((cpm_p + 1) / (cpm_g + 1)), detect_frac=frac[idx_g], p=pv, q=q, n_GR=nl[0], n_PR=nl[1]))
     T['panel'] = [panel_of.get(g, '') for g in T['gene']]
-    from step76_blocks import G2B as B27
+    from blocks import G2B as B27
     T['block27'] = [B27.get(g, '') for g in T['gene']]
     T = T.sort_values('p')
     T.to_csv(os.path.join(TAB, 'TableF_volcano_GRvsPR.csv'), index=False)
