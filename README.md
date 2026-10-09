@@ -1,6 +1,10 @@
 # CAR-T myeloid–fibroblast barrier: key analysis code
 
-Analysis scripts curated from the [CART_ST2025](https://github.com/noorawang98/CART_ST2025) revision archive, following the methodological sequence: annotation, Scissor, functional states, Fourier analysis, MIB definitions, neighbourhood statistics, functional correlations/enrichment, imaging conversion, clinical pseudobulk and survival.
+Analysis scripts curated from the [CART_ST2025](https://github.com/noorawang98/CART_ST2025) revision archive, following the methodological sequence: 
+- scRNA-inferred deconvoluntion and dominant celltype annotation for bin50 Stereo-seq or Level13 BSTMatrix S1000;
+- Scissor-based clinical label deconvolution and subtyping strategies for CAR+ Spot subtyping, with T cell function cocordance test and Fourier analysis of major contribution to clincial labels
+- SpatialCNV-based tumor region and MIB definitions, associated neighbourhood statistics;
+- Other functional correlations/enrichment, imaging conversion, clinical pseudobulk and survival.
 
 ## Start here
 
