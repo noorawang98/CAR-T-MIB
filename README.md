@@ -1,6 +1,6 @@
 # CAR-T myeloid–fibroblast barrier: key analysis code
 
-Analysis scripts curated from the author-supplied revision archive. Numbered folders follow the methodological sequence: annotation, Scissor, functional states, Fourier analysis, MIB definitions, neighbourhood statistics, functional correlations/enrichment, imaging conversion, clinical pseudobulk and survival.
+Analysis scripts curated from the [CART_ST2025](https://github.com/noorawang98/CART_ST2025) revision archive. Numbered folders follow the methodological sequence: annotation, Scissor, functional states, Fourier analysis, MIB definitions, neighbourhood statistics, functional correlations/enrichment, imaging conversion, clinical pseudobulk and survival.
 
 The release contains calculations and tabular exports. Figure generation, layout checking, historical alternatives and duplicate scripts were removed. Scientific thresholds, model formulas, permutation counts and seeds were preserved. Original step numbers remain in filenames to preserve provenance and cross-script references.
 
