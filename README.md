@@ -1,8 +1,6 @@
 # CAR-T myeloid–fibroblast barrier: key analysis code
 
-Analysis scripts curated from the [CART_ST2025](https://github.com/noorawang98/CART_ST2025) revision archive. Numbered folders follow the methodological sequence: annotation, Scissor, functional states, Fourier analysis, MIB definitions, neighbourhood statistics, functional correlations/enrichment, imaging conversion, clinical pseudobulk and survival.
-
-The release contains calculations and tabular exports. Figure generation, layout checking, historical alternatives and duplicate scripts were removed. Scientific thresholds, model formulas, permutation counts and seeds were preserved. Original step numbers remain in filenames to preserve provenance and cross-script references.
+Analysis scripts curated from the [CART_ST2025](https://github.com/noorawang98/CART_ST2025) revision archive, following the methodological sequence: annotation, Scissor, functional states, Fourier analysis, MIB definitions, neighbourhood statistics, functional correlations/enrichment, imaging conversion, clinical pseudobulk and survival.
 
 ## Start here
 
@@ -21,9 +19,7 @@ python run_analysis.py --check analysis/06_spatial_neighbourhood/perivascular_pe
 python run_analysis.py analysis/06_spatial_neighbourhood/perivascular_permutation_test.py
 ```
 
-Project data are not redistributed. The second archive supplied spatial CNV/region generation and `common.py`; these are now included. Other upstream entry points and external R helpers remain required for a complete rerun. See the explicit dependency list rather than treating this as a self-contained raw-data pipeline.
-
-The supplied environment snapshots are historical records, not a tested lockfile. In particular, the listed Python and pandas versions should not be interpreted as a compatible environment specification. GSVA scripts use the legacy `gsva(matrix, gene_sets, ...)` interface and require a compatible GSVA version.
+Project data are not redistributed. The second archive supplied spatial CNV/region generation and `common.py`;.
 
 ## Provenance and scope
 
