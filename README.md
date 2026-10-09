@@ -27,8 +27,6 @@ Project data are not redistributed. The second archive supplied spatial CNV/regi
 
 ## Provenance and scope
 
-- [Script manifest](docs/script_manifest.csv): original and release paths and SHA-256 hashes.
-- [Excluded scripts](docs/excluded_scripts.csv): files removed from the release and their reasons.
 - [Methods/code alignment](docs/METHOD_ALIGNMENT.md): differences that cannot be resolved by reorganizing code.
 - [Validation](docs/VALIDATION.md): checks performed and their limits.
 - [Final clinical GSEA update](docs/GSEA_UPDATE.md): user-confirmed adjusted path and a source sorting correction.
