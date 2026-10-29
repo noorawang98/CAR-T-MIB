@@ -1,5 +1,5 @@
 # CAR-T myeloid–fibroblast barrier: key analysis code
-2026-10-29 News!: The paper has been accepted in principle by *Cancer Cell*
+2026-10-29 News: The paper has been accepted in principle by *Cancer Cell* !
 
 Analysis scripts curated from the [CART_ST2025](https://github.com/noorawang98/CART_ST2025) revision archive, following the methodological sequence: 
 - scRNA-seq reference [DestVI](https://github.com/YosefLab/destvi_utils)–guided deconvolution and dominant cell-type annotation of bin50 Stereo-seq and Level13 BSTMatrix S1000 data.
