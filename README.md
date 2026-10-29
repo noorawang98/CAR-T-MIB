@@ -1,5 +1,5 @@
 # CAR-T myeloid–fibroblast barrier: key analysis code
-
+# News!: The paper has been accepted in principle by *Cancer Cell*
 Analysis scripts curated from the [CART_ST2025](https://github.com/noorawang98/CART_ST2025) revision archive, following the methodological sequence: 
 - scRNA-seq reference [DestVI](https://github.com/YosefLab/destvi_utils)–guided deconvolution and dominant cell-type annotation of bin50 Stereo-seq and Level13 BSTMatrix S1000 data.
 - [Scissor](https://github.com/sunduanchen/Scissor)-based clinical-response label projection and functional stratification of CAR⁺ spots, including T-cell functional concordance tests and Fourier analysis of spatial associations between microenvironmental features and inferred response labels.
